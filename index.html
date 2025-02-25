@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kaixuan Bian - Personal Website</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* ========== 全局CSS变量（可自行调整） ========== */
+    :root {
+      --color-bg: #16161A;               /* 页面背景色 */
+      --color-section-bg: #242629;       /* 区块背景色 */
+      --color-primary: #7F5AF0;          /* 主色调（紫） */
+      --color-accent: #2CB67D;          /* 辅助色（绿色） */
+      --color-text: #FFFFFE;            /* 正文字体颜色（白） */
+      --color-heading: #FFFFFE;         /* 标题字体颜色 */
+      --font-heading: 'Poppins', sans-serif;
+      --font-body: 'Open Sans', sans-serif;
+      --transition-speed: 0.3s;
+      --container-width: 1100px;
+    }
+
+    /* ========== 全局基础样式 ========== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--color-accent);
+      text-decoration: none;
+      transition: color var(--transition-speed);
+    }
+    a:hover {
+      color: var(--color-primary);
+    }
+
+    /* ========== 头部 ========== */
+    header {
+      background: linear-gradient(
+        135deg,
+        var(--color-primary) 0%,
+        var(--color-accent) 100%
+      );
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--color-text);
+    }
+    header h1 {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* ========== 导航栏 ========== */
+    nav {
+      background-color: #1f1f23;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      margin: 0 15px;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    /* ========== 容器 ========== */
+    .container {
+      width: 90%;
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+
+    /* ========== 分区区块 ========== */
+    section {
+      background-color: var(--color-section-bg);
+      padding: 40px 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: var(--color-heading);
+    }
+    section p {
+      margin-bottom: 1em;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    /* ========== CV 样式：网格布局 ========== */
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    .grid-item {
+      flex: 1 1 45%;
+      background-color: #2f2f37;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    }
+    .grid-item h3 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: var(--color-heading);
+    }
+    .grid-item p {
+      margin-bottom: 0.8em;
+    }
+    /* 鼠标悬停时带一点放大和阴影 */
+    .grid-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+    @media (max-width: 768px) {
+      .grid-item {
+        flex: 1 1 100%;
+      }
+    }
+
+    /* ========== 页脚 ========== */
+    footer {
+      background-color: #1f1f23;
+      text-align: center;
+      padding: 20px 0;
+      color: var(--color-text);
+    }
+    footer p {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <!-- 头部 -->
+  <header>
+    <h1>Kaixuan Bian</h1>
+    <p>Neuroscience | Computational Biology | Research Enthusiast</p>
+  </header>
+
+  <!-- 导航栏 -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- 主容器 -->
+  <div class="container">
+    <!-- About Section -->
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        Welcome to my personal website. I am Kaixuan Bian, a dedicated
+        researcher with a passion for uncovering the neural underpinnings of
+        conscious perception. My academic journey—from a robust foundation in
+        life sciences to advanced work in neural signal processing and machine
+        learning—drives my commitment to exploring how the brain integrates
+        sensory information.
+      </p>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research">
+      <h2 class="section-title">Research Interests</h2>
+      <p>
+        My research centers on understanding the neural coding schemes that
+        give rise to conscious experience through integrated sensory inputs. I
+        focus on audiovisual integration, speech decoding, and multimodal data
+        analysis using advanced techniques such as spectral-temporal receptive
+        field analysis, cross-subject clustering, and machine learning. I also
+        explore metabolic interactions in bacterial biofilms to draw insights
+        into complex, high-dimensional systems.
+      </p>
+      <p>
+        I aim to bridge experimental data with computational models by
+        developing novel analytical frameworks that capture the transient yet
+        structured patterns of neural activity, ultimately contributing to a
+        unified model of conscious awareness.
+      </p>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv">
+      <h2 class="section-title">Curriculum Vitae</h2>
+      <div class="grid">
+        <div class="grid-item">
+          <h3>Education</h3>
+          <p>
+            <strong>Shanghaitech University</strong><br />
+            B.Sc. in Life Sciences (Expected Jun. 2026)<br />
+            Relevant Coursework: Molecular Biology, Cell Biology, Biochemistry,
+            Genetics, Neural Signal Processing, Machine Learning, Systems
+            Biology, and more.
+          </p>
+        </div>
+        <div class="grid-item">
+          <h3>Research & Experience</h3>
+          <p>
+            <strong>Multimodal Integration Study with ECoG Signals</strong>
+            (Sep. 2024 – Jan. 2025)<br />
+            - Preprocessed and analyzed ECoG signals using Python and MATLAB.<br />
+            - Conducted cross-subject clustering analysis and cortical surface
+            visualization.
+          </p>
+          <p>
+            <strong>Research Assistant, Neuroscience Lab</strong>
+            (Aug. 2023 – Nov. 2023)<br />
+            - Investigated neural mechanisms linking olfactory and auditory
+            stimuli with working memory.
+          </p>
+          <p>
+            <strong>Research on Bacterial Biofilm and Metabolic Interactions</strong>
+            (Sep. 2023 – Jan. 2024)<br />
+            - Studied biofilm-mediated antibiotic resistance using spatial
+            transcriptomics.
+          </p>
+          <p>
+            <strong>Speech Neuroprosthesis Project</strong> (Course Project)<br />
+            - Integrated triphone/diphone models for enhanced speech decoding.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="grid-item">
+          <h3>Additional Experience</h3>
+          <p>
+            <strong>Neuromatch Academy Program</strong> (Jul. 2024 – Sep. 2024)<br />
+            - Conducted ECoG signal analysis and collaborated on remote
+            neuroscience projects.
+          </p>
+          <p>
+            <strong>Peking University Information Processing Laboratory</strong>
+            (Aug. 2023 – Sep. 2023)<br />
+            - Trained in neural computation modeling and advanced signal
+            analysis techniques.
+          </p>
+        </div>
+        <div class="grid-item">
+          <h3>Leadership & Skills</h3>
+          <p>
+            <strong>President, Shanghaitech University Volunteers Association</strong>
+            (Sep. 2023 – Jan. 2025)<br />
+            - Organized fundraising events and volunteer initiatives.
+          </p>
+          <p>
+            <strong>Skills</strong><br />
+            - Programming: Python, MATLAB, R<br />
+            - Tools: PyTorch, SciKit Learn, MeshLab, BrainPy<br />
+            - Languages: English, Mandarin<br />
+            - Interests: Half Marathon, Biking, Hiking
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <p>
+        If you would like to discuss research collaborations or have any
+        inquiries, feel free to reach out.
+      </p>
+      <p>
+        Email:
+        <a href="mailto:kaixuan_bian@berkeley.edu">kaixuan_bian@berkeley.edu</a>
+      </p>
+    </section>
+  </div>
+
+  <!-- 页脚 -->
+  <footer>
+    <p>&copy; 2025 Kaixuan Bian. All rights reserved.</p>
+  </footer>
+</body>
+</html>
